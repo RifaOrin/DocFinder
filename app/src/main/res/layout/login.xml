@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp"
+    android:gravity="center">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:src="@drawable/logowhite">
+
+        </ImageView>
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:textColor="@color/black"
+            android:textColorHint="@color/dark_green"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppinsbold"
+            android:background="@drawable/rounded_corner"
+            android:padding="18dp"
+            android:inputType="text"
+            >
+
+        </EditText>
+        <EditText
+            android:id="@+id/password"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:textColor="@color/black"
+            android:textColorHint="@color/dark_green"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppinsbold"
+            android:background="@drawable/rounded_corner"
+            android:padding="18dp"
+            android:inputType="textPassword"
+            android:drawableEnd="@drawable/pass_icon"
+            >
+
+        </EditText>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="L O G I N"
+            android:backgroundTint="@color/green"
+            android:textColor="@color/white"
+            android:layout_marginTop="12dp"
+            android:padding="17dp"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppinsbold"
+            android:id="@+id/login"
+        />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remember me"
+                android:layout_centerVertical="true"
+                android:alpha="0.7"
+                android:fontFamily="@font/poppinsbold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgotten password?"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/poppinsbold"
+                android:textColor="@color/dark_green"/>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account?"
+            android:fontFamily="@font/poppinsmedium"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+
+            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Sign Up"
+                android:textSize="15sp"
+                android:fontFamily="@font/poppinsbold"
+                android:textColor="@color/dark_green"
+                />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
