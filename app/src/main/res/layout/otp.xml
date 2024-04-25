@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FFFFFF">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+
+        >
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="90dp"
+            android:src="@drawable/receivemail"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="OTP Verification"
+            android:textSize="25sp"
+            android:fontFamily="@font/poppinsbold"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:text="Please enter 4 digit OTP sent to you"
+            android:gravity="center"
+            android:textColor="@color/dark_green"
+            android:textSize="15sp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppinsmedium"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <EditText
+                android:id="@+id/input1"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:background="@drawable/rounded_corner"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                tools:ignore="labelFor"
+                android:fontFamily="@font/poppinsbold"/>
+            <EditText
+                android:id="@+id/input1"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/rounded_corner"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                tools:ignore="labelFor"
+                android:fontFamily="@font/poppinsbold"/>
+            <EditText
+                android:id="@+id/input1"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/rounded_corner"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                tools:ignore="labelFor"
+                android:fontFamily="@font/poppinsbold"/>
+            <EditText
+                android:id="@+id/input1"
+                android:layout_width="68dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/rounded_corner"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                tools:ignore="labelFor"
+                android:fontFamily="@font/poppinsbold"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't receive the otp?"
+                android:fontFamily="@font/poppinsmedium"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="RESEND OTP AGAIN"
+                android:textSize="15sp"
+                android:fontFamily="@font/poppinsbold"
+                android:textColor="@color/dark_green"
+                />
+        </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:text="Enter OTP"
+            android:backgroundTint="@color/green"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:padding="15dp"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppinsbold"
+            android:id="@+id/login"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>
