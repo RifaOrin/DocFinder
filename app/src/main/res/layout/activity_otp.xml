@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:text="OTP Verification"
+            android:text="Verification Code"
             android:textSize="25sp"
             android:fontFamily="@font/poppinsbold"/>
         <TextView
@@ -28,7 +28,18 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:layout_marginEnd="50dp"
-            android:text="Please enter 4 digit OTP sent to you"
+            android:text="Please enter OTP code that sent to your contact in the box below."
+            android:gravity="center"
+            android:textColor="@color/dark_green"
+            android:textSize="15sp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppinsmedium"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:text="OTP code sent to 01711453109"
             android:gravity="center"
             android:textColor="@color/dark_green"
             android:textSize="15sp"
@@ -37,15 +48,15 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="50dp"
             android:gravity="center"
             android:orientation="horizontal"
             >
 
             <EditText
                 android:id="@+id/input1"
-                android:layout_width="60dp"
-                android:layout_height="66dp"
+                android:layout_width="40dp"
+                android:layout_height="46dp"
                 android:background="@drawable/rounded_corner"
                 android:gravity="center"
                 android:imeOptions="actionNext"
@@ -58,8 +69,8 @@
                 android:fontFamily="@font/poppinsbold"/>
             <EditText
                 android:id="@+id/input1"
-                android:layout_width="60dp"
-                android:layout_height="66dp"
+                android:layout_width="40dp"
+                android:layout_height="46dp"
                 android:layout_marginStart="10dp"
                 android:background="@drawable/rounded_corner"
                 android:gravity="center"
@@ -73,8 +84,8 @@
                 android:fontFamily="@font/poppinsbold"/>
             <EditText
                 android:id="@+id/input1"
-                android:layout_width="60dp"
-                android:layout_height="66dp"
+                android:layout_width="40dp"
+                android:layout_height="46dp"
                 android:layout_marginStart="10dp"
                 android:background="@drawable/rounded_corner"
                 android:gravity="center"
@@ -88,8 +99,38 @@
                 android:fontFamily="@font/poppinsbold"/>
             <EditText
                 android:id="@+id/input1"
-                android:layout_width="60dp"
-                android:layout_height="66dp"
+                android:layout_width="40dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/rounded_corner"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                tools:ignore="labelFor"
+                android:fontFamily="@font/poppinsbold"/>
+            <EditText
+                android:id="@+id/input1"
+                android:layout_width="40dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/rounded_corner"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                tools:ignore="labelFor"
+                android:fontFamily="@font/poppinsbold"/>
+            <EditText
+                android:id="@+id/input1"
+                android:layout_width="40dp"
+                android:layout_height="46dp"
                 android:layout_marginStart="10dp"
                 android:background="@drawable/rounded_corner"
                 android:gravity="center"
@@ -111,7 +152,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="40dp"
-            android:layout_marginBottom="20dp">
+            android:layout_marginBottom="80dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -136,12 +177,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
-            android:layout_marginBottom="50dp"
-            android:text="Enter OTP"
+            android:layout_marginBottom="20dp"
+            android:text="Confirm Code"
             android:backgroundTint="@color/green"
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
-            android:padding="15dp"
+            android:padding="10dp"
             android:textSize="20sp"
             android:fontFamily="@font/poppinsbold"
             android:id="@+id/login"

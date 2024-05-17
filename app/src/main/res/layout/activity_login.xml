@@ -17,6 +17,7 @@
             android:src="@drawable/logowhite">
 
         </ImageView>
+
         <EditText
             android:id="@+id/phone"
             android:layout_width="match_parent"
@@ -92,20 +93,20 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Don't have an account?"
+            android:text="Or,"
             android:fontFamily="@font/poppinsmedium"
             android:textSize="15sp"
             android:textColor="@color/black"
 
             />
-            <TextView
+            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:text="Sign Up"
+                android:text="Login by using phone number"
                 android:textSize="15sp"
                 android:fontFamily="@font/poppinsbold"
                 android:textColor="@color/dark_green"
+                style="?attr/borderlessButtonStyle"
                 />
         </LinearLayout>
 

@@ -5,6 +5,9 @@
     android:background="#FFFFFF"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:scrollbars="none"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".OtpPhoneActivity"
+
     >
 
     <LinearLayout
@@ -14,37 +17,26 @@
         android:gravity="center_horizontal">
 
         <ImageView
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="350dp"
+            android:layout_height="200dp"
             android:layout_marginTop="90dp"
-            android:src="@drawable/sendmail"/>
+            android:src="@drawable/logowhite"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:text="OTP Verification"
+            android:text="Good health starts here"
             android:textSize="25sp"
             android:fontFamily="@font/poppinsbold"/>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:layout_marginEnd="50dp"
-            android:text="we will send you an one time otp on this phone number"
-            android:gravity="center"
-            android:textColor="@color/dark_green"
-            android:textSize="15sp"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/poppinsmedium"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginEnd="50dp"
-            android:text="Enter Phone Number"
+            android:text="Please enter your phone number"
             android:gravity="center"
             android:textColor="#728b8d"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:textSize="17sp"
             android:fontFamily="@font/poppinsregular"/>
 
@@ -82,13 +74,30 @@
 
 
         </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/termsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You agree to our Terms, Conditions and Privacy Policy"
+            android:fontFamily="@font/poppinsmedium"
+            android:textSize="12sp"
+            android:textColor="@color/grey"
+
+
+            />
+    </LinearLayout>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
-            android:layout_marginBottom="50dp"
-            android:text="Get OTP"
+
+            android:text="Next"
             android:backgroundTint="@color/green"
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
@@ -97,7 +106,34 @@
             android:fontFamily="@font/poppinsbold"
             android:id="@+id/login"
             style="@style/Widget.MaterialComponents.Button.TextButton"
+
             />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Or,"
+                android:fontFamily="@font/poppinsmedium"
+                android:textSize="15sp"
+                android:textColor="@color/grey"
+
+
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login by using password"
+                android:textSize="15sp"
+                android:fontFamily="@font/poppinsbold"
+                android:textColor="@color/dark_green"
+                style="?attr/borderlessButtonStyle"
+                />
+        </LinearLayout>
 
     </LinearLayout>
     
