@@ -201,7 +201,7 @@
                 android:layout_below="@+id/districtField"
                 android:layout_marginTop="12dp"
                 android:layout_marginBottom="12dp"
-                android:hint="Area"
+                android:hint="Division"
                 android:textColorHint="@color/dark_green"
                 app:hintTextColor="@color/dark_green"
                 app:boxStrokeColor="@color/dark_green"
@@ -217,56 +217,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
         </RelativeLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="12dp">
 
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:layout_weight="2"
-                android:hint="Code"
-                android:textColorHint="@color/dark_green"
-                app:hintTextColor="@color/dark_green"
-                app:boxStrokeColor="@color/dark_green"
-                app:endIconTint="@color/black"
-                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
-                <AutoCompleteTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="none"
-                    android:fontFamily="@font/poppinsmedium"
-                    android:textColor="@color/black"
-                    />
-            </com.google.android.material.textfield.TextInputLayout>
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/phone"
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Phone no"
-                android:textColorHint="@color/dark_green"
-                app:hintTextColor="@color/dark_green"
-                app:boxStrokeColor="@color/dark_green"
-                app:cursorColor="@color/black"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppinsmedium"
-                    android:textColor="@color/black"
-                    android:inputType="phone"
-                    />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-        </LinearLayout>
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/email"
             android:layout_width="match_parent"

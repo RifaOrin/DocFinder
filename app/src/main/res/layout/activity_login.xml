@@ -18,17 +18,17 @@
 
         </ImageView>
         <EditText
-            android:id="@+id/username"
+            android:id="@+id/phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Username"
+            android:hint="Phone"
             android:textColor="@color/black"
             android:textColorHint="@color/dark_green"
             android:textSize="20sp"
             android:fontFamily="@font/poppinsbold"
             android:background="@drawable/rounded_corner"
             android:padding="18dp"
-            android:inputType="text"
+            android:inputType="phone"
             >
 
         </EditText>
