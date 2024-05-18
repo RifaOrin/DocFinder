@@ -35,11 +35,11 @@
             android:layout_marginTop="8dp"
             android:fontFamily="@font/poppinsmedium"/>
         <TextView
+            android:id="@+id/tvOtpCodeSent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:layout_marginEnd="50dp"
-            android:text="OTP code sent to 01711453109"
             android:gravity="center"
             android:textColor="@color/dark_green"
             android:textSize="15sp"
@@ -54,7 +54,7 @@
             >
 
             <EditText
-                android:id="@+id/input1"
+                android:id="@+id/etInput1"
                 android:layout_width="40dp"
                 android:layout_height="46dp"
                 android:background="@drawable/rounded_corner"
@@ -68,22 +68,7 @@
                 tools:ignore="labelFor"
                 android:fontFamily="@font/poppinsbold"/>
             <EditText
-                android:id="@+id/input1"
-                android:layout_width="40dp"
-                android:layout_height="46dp"
-                android:layout_marginStart="10dp"
-                android:background="@drawable/rounded_corner"
-                android:gravity="center"
-                android:imeOptions="actionNext"
-                android:importantForAutofill="no"
-                android:inputType="number"
-                android:maxLength="1"
-                android:textColor="@color/black"
-                android:textSize="30sp"
-                tools:ignore="labelFor"
-                android:fontFamily="@font/poppinsbold"/>
-            <EditText
-                android:id="@+id/input1"
+                android:id="@+id/etInput2"
                 android:layout_width="40dp"
                 android:layout_height="46dp"
                 android:layout_marginStart="10dp"
@@ -98,7 +83,7 @@
                 tools:ignore="labelFor"
                 android:fontFamily="@font/poppinsbold"/>
             <EditText
-                android:id="@+id/input1"
+                android:id="@+id/etInput3"
                 android:layout_width="40dp"
                 android:layout_height="46dp"
                 android:layout_marginStart="10dp"
@@ -113,7 +98,7 @@
                 tools:ignore="labelFor"
                 android:fontFamily="@font/poppinsbold"/>
             <EditText
-                android:id="@+id/input1"
+                android:id="@+id/etInput4"
                 android:layout_width="40dp"
                 android:layout_height="46dp"
                 android:layout_marginStart="10dp"
@@ -128,7 +113,22 @@
                 tools:ignore="labelFor"
                 android:fontFamily="@font/poppinsbold"/>
             <EditText
-                android:id="@+id/input1"
+                android:id="@+id/etInput5"
+                android:layout_width="40dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/rounded_corner"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                tools:ignore="labelFor"
+                android:fontFamily="@font/poppinsbold"/>
+            <EditText
+                android:id="@+id/etInput6"
                 android:layout_width="40dp"
                 android:layout_height="46dp"
                 android:layout_marginStart="10dp"
@@ -156,24 +156,25 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Don't receive the otp?"
+                android:text="Don't receive the OTP?"
                 android:fontFamily="@font/poppinsmedium"
                 android:textSize="15sp"
                 android:textColor="@color/black"
 
                 />
-            <Button
-                style="?attr/borderlessButtonStyle"
+            <TextView
+                android:id="@+id/tvResendOtp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text="RESEND OTP AGAIN"
+                android:text="RESEND OTP"
                 android:textSize="15sp"
                 android:fontFamily="@font/poppinsbold"
                 android:textColor="@color/dark_green"
                 />
         </LinearLayout>
         <Button
+            android:id="@+id/btnConfirmOtp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
@@ -186,7 +187,6 @@
             android:padding="10dp"
             android:textSize="20sp"
             android:fontFamily="@font/poppinsbold"
-            android:id="@+id/login"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             />
     </LinearLayout>
