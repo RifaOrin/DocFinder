@@ -73,7 +73,8 @@
                 android:layout_centerVertical="true"
                 android:alpha="0.7"
                 android:fontFamily="@font/poppinsbold"/>
-            <TextView
+            <Button
+                style="?attr/borderlessButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Forgotten password?"
