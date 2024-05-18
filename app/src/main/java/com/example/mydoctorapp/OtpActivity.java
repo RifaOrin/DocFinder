@@ -7,6 +7,7 @@ import androidx.core.content.ContextCompat;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.Button;
@@ -42,6 +43,8 @@ public class OtpActivity extends AppCompatActivity {
     private Button btnConfirmOtp;
 
     private ProgressDialog progressDialog;
+
+    private CountDownTimer countDownTimer;
 
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
@@ -85,7 +88,25 @@ public class OtpActivity extends AppCompatActivity {
 
        tvResendOtp.setOnClickListener(v -> {
             sendOtp(phoneNumber, true);
+            showLoadingPopup();
         });
+    }
+
+    private void disableResendOtp() {
+        tvResendOtp.setEnabled(false);
+        tvResendOtp.setTextColor(R.color.grey);
+
+        countDownTimer = new CountDownTimer(60000, 1000) {
+            public void onTick(long millisUntilFinished) {
+                tvResendOtp.setText("Resend OTP (" + millisUntilFinished / 1000 + "s)");
+            }
+
+            public void onFinish() {
+                tvResendOtp.setEnabled(true);
+                tvResendOtp.setTextColor(R.color.dark_green);
+                tvResendOtp.setText("Resend OTP");
+            }
+        }.start();
     }
 
     private void showLoadingPopup() {
@@ -156,6 +177,7 @@ public class OtpActivity extends AppCompatActivity {
                             public void onVerificationFailed(@NonNull FirebaseException e) {
                                 Toast.makeText(getApplicationContext(), "OTP Verification Failed", Toast.LENGTH_LONG).show();
                                 dismissLoadingPopup();
+                                disableResendOtp();
                             }
 
                             @Override
@@ -165,6 +187,7 @@ public class OtpActivity extends AppCompatActivity {
                                 otpResendingToken = forceResendingToken;
                                 Toast.makeText(getApplicationContext(), "OTP Sent Successfully", Toast.LENGTH_LONG).show();
                                 dismissLoadingPopup();
+                                disableResendOtp();
                             }
                         });
         if (isResend){
