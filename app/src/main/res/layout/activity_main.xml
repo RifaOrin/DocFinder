@@ -11,12 +11,13 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white">
+        android:background="@color/white"
+        android:paddingBottom="10dp">
 
         <ImageView
             android:id="@+id/logo"
-            android:layout_width="100dp"
-            android:layout_height="70dp"
+            android:layout_width="150dp"
+            android:layout_height="90dp"
             android:src="@drawable/logowhite"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -42,6 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:layout_marginStart="6dp"
             android:fontFamily="@font/poppinsbold"
             android:text="Popular Specialists"
             android:textColor="@color/black"
@@ -56,6 +58,7 @@
             android:layout_marginTop="12dp"
             android:fontFamily="@font/poppinsbold"
             android:text="View All"
+            android:layout_marginLeft="10dp"
             android:textColor="@color/dark_green"
             app:layout_constraintEnd_toEndOf="@+id/searchbar"
             app:layout_constraintHorizontal_bias="1.0"
@@ -67,6 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/popular"
+            app:layout_constraintStart_toStartOf="@+id/popular"
             android:scrollbars="none">
 
             <LinearLayout
@@ -90,7 +94,7 @@
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="150dp"
                             android:layout_height="200dp"
-                            android:scaleType="centerInside"
+                            android:scaleType="centerCrop"
                             app:srcCompat="@drawable/doctor1" />
 
                         <LinearLayout
@@ -176,7 +180,7 @@
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="150dp"
                             android:layout_height="200dp"
-                            android:scaleType="centerInside"
+                            android:scaleType="centerCrop"
                             app:srcCompat="@drawable/doctor2" />
 
                         <LinearLayout
@@ -262,7 +266,7 @@
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="150dp"
                             android:layout_height="200dp"
-                            android:scaleType="centerInside"
+                            android:scaleType="centerCrop"
                             app:srcCompat="@drawable/doctor3" />
 
                         <LinearLayout
@@ -348,7 +352,7 @@
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="150dp"
                             android:layout_height="200dp"
-                            android:scaleType="centerInside"
+                            android:scaleType="centerCrop"
                             app:srcCompat="@drawable/doctor4" />
 
                         <LinearLayout
@@ -434,7 +438,7 @@
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="150dp"
                             android:layout_height="200dp"
-                            android:scaleType="centerInside"
+                            android:scaleType="centerCrop"
                             app:srcCompat="@drawable/doctor5" />
 
                         <LinearLayout
@@ -478,7 +482,7 @@
                                 />
 
                             <TextView
-                                android:id="@+id/taka"
+                                android:id="@+id/taka5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="25dp"
@@ -508,7 +512,739 @@
             </LinearLayout>
         </HorizontalScrollView>
 
+        <TextView
+            android:id="@+id/symptom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppinsbold"
+            android:text="Find Doctors by Department"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/popular"
+            app:layout_constraintTop_toBottomOf="@+id/scroll" />
+
+        <Button
+            android:id="@+id/viewall2"
+            style="?attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/poppinsbold"
+            android:text="View All"
+            android:textColor="@color/dark_green"
+            app:layout_constraintEnd_toEndOf="@+id/searchbar"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/symptom"
+            app:layout_constraintTop_toBottomOf="@id/scroll" />
+        <TextView
+            android:id="@+id/department"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select department to find a doctor"
+            app:layout_constraintStart_toStartOf="@+id/symptom"
+            app:layout_constraintTop_toBottomOf="@+id/symptom"
+            app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+            android:textSize="14sp"
+            android:textColor="@color/grey"
+            android:fontFamily="@font/poppinsmedium"
+            />
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="4"
+            android:rowCount="4"
+            android:columnOrderPreserved="false"
+            app:layout_constraintStart_toStartOf="@+id/symptom"
+            app:layout_constraintEnd_toEndOf="@id/viewall2"
+            app:layout_constraintTop_toBottomOf="@+id/department"
+            app:layout_constraintBottom_toTopOf="@+id/available"
+            android:layout_marginTop="10dp"
+            >
+
+            <!-- First Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/dept1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:clickable="true"
+                android:onClick="onCardClicked"
+                android:layout_margin="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="centerInside"
+                        app:srcCompat="@drawable/medicine" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:fontFamily="@font/poppinsbold"
+                        android:text="Medicine"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Second Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/dept2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:clickable="true"
+                android:onClick="onCardClicked"
+                android:layout_margin="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="centerInside"
+                        app:srcCompat="@drawable/pediatrics" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:fontFamily="@font/poppinsbold"
+                        android:text="Pediatrics"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Third Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/dept3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:clickable="true"
+                android:onClick="onCardClicked"
+                android:layout_margin="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/skin" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:fontFamily="@font/poppinsbold"
+                        android:text="Dermatology"
+                        android:textColor="@color/black"
+                        android:textSize="11sp"/>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Fourth Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/dept4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="3"
+                android:clickable="true"
+                android:onClick="onCardClicked"
+                android:layout_margin="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/stomach" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:fontFamily="@font/poppinsbold"
+                        android:text="Gastrology"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Fifth Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/dept5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:clickable="true"
+                android:onClick="onCardClicked"
+                android:layout_margin="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="centerInside"
+                        app:srcCompat="@drawable/brain" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:fontFamily="@font/poppinsbold"
+                        android:text="Neurology"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Sixth Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/dept6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:clickable="true"
+                android:onClick="onCardClicked"
+                android:layout_margin="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="centerInside"
+                        app:srcCompat="@drawable/doctoricon" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:fontFamily="@font/poppinsbold"
+                        android:text="Physician"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/dept7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="2"
+                android:clickable="true"
+                android:onClick="onCardClicked"
+                android:layout_margin="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/cardiology" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:fontFamily="@font/poppinsbold"
+                        android:text="Cardiology"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/dept8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="3"
+                android:clickable="true"
+                android:onClick="onCardClicked"
+                android:layout_margin="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="centerInside"
+                        app:srcCompat="@drawable/gynae" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:fontFamily="@font/poppinsbold"
+                        android:text="Gynae"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+        </GridLayout>
+        <TextView
+            android:id="@+id/available"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppinsbold"
+            android:text="Available Doctors"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/symptom"
+            app:layout_constraintTop_toBottomOf="@+id/gridLayout"
+            app:layout_constraintBottom_toTopOf="@id/gridLayout2"/>
+
+        <Button
+            android:id="@+id/viewall3"
+            style="?attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/poppinsbold"
+            android:text="View All"
+            android:textColor="@color/dark_green"
+            app:layout_constraintEnd_toEndOf="@+id/searchbar"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/available"
+            app:layout_constraintTop_toBottomOf="@id/gridLayout" />
+        <GridLayout
+            android:id="@+id/gridLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:columnOrderPreserved="false"
+            app:layout_constraintStart_toStartOf="@id/available"
+            app:layout_constraintEnd_toEndOf="@id/viewall2"
+            app:layout_constraintTop_toBottomOf="@+id/available"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/avail1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_row="0"
+                android:layout_column="0"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="170dp"
+                        android:layout_height="130dp"
+                        android:scaleType="centerInside"
+                        app:srcCompat="@drawable/doctor3" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <!-- Title, secondary and supporting text -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsbold"
+                            android:text="Dr. Rajib"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="MBBS, BCS (Health), MD(Gastroenterology)"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                        <Button
+                            android:id="@+id/GasAvail"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/green"
+                            android:fontFamily="@font/poppinsbold"
+                            android:text="Gastroenterologist"
+                            android:textColor="@color/white"
+                            android:textSize="7sp"
+
+
+                            />
+
+                        <TextView
+                            android:id="@+id/takaAvail1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="@font/poppinsextra"
+                            android:text="Tk.500"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                        <Button
+                            style="?attr/borderlessButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:drawableEnd="@drawable/right_arrow"
+                            android:drawablePadding="5dp"
+                            android:fontFamily="@font/poppinsextra"
+                            android:text="See Doctor"
+                            android:textColor="@color/dark_green"
+                            android:textSize="10sp" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/avail2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_row="0"
+                android:layout_column="1"
+               >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="170dp"
+                        android:layout_height="130dp"
+                        android:scaleType="centerInside"
+                        app:srcCompat="@drawable/doctor5" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <!-- Title, secondary and supporting text -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsbold"
+                            android:text="Asst. Prof. Dr. Araf"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="MBBS, BCS (Health), DCH(Pediatrics"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                        <Button
+                            android:id="@+id/childAvail"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/green"
+                            android:fontFamily="@font/poppinsbold"
+                            android:text="Child Disease specialist"
+                            android:textColor="@color/white"
+                            android:textSize="7sp"
+
+
+                            />
+
+                        <TextView
+                            android:id="@+id/takaAvail2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="@font/poppinsextra"
+                            android:text="Tk.350"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                        <Button
+                            style="?attr/borderlessButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:drawableEnd="@drawable/right_arrow"
+                            android:drawablePadding="5dp"
+                            android:fontFamily="@font/poppinsextra"
+                            android:text="See Doctor"
+                            android:textColor="@color/dark_green"
+                            android:textSize="10sp" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/avail3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_row="1"
+                android:layout_column="0"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="170dp"
+                        android:layout_height="130dp"
+                        android:scaleType="centerInside"
+                        app:srcCompat="@drawable/doctor2" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <!-- Title, secondary and supporting text -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsbold"
+                            android:text="Dr. Maria Seraj"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="MBBS, BCS(Health)(Dermatology)"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                        <Button
+                            android:id="@+id/DermaAvail"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/green"
+                            android:fontFamily="@font/poppinsbold"
+                            android:text="Dermatologist"
+                            android:textColor="@color/white"
+                            android:textSize="7sp"
+
+
+                            />
+
+                        <TextView
+                            android:id="@+id/takaAvail3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="@font/poppinsextra"
+                            android:text="Tk.350"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                        <Button
+                            style="?attr/borderlessButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:drawableEnd="@drawable/right_arrow"
+                            android:drawablePadding="5dp"
+                            android:fontFamily="@font/poppinsextra"
+                            android:text="See Doctor"
+                            android:textColor="@color/dark_green"
+                            android:textSize="10sp" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/avail4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_row="1"
+                android:layout_column="1"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="170dp"
+                        android:layout_height="130dp"
+                        android:scaleType="centerInside"
+                        app:srcCompat="@drawable/doctor4" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <!-- Title, secondary and supporting text -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsbold"
+                            android:text="Asst. Prof. Dr. Z. Wadud"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="MS (Orthopedics)"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                        <Button
+                            android:id="@+id/OrthoAvail"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/green"
+                            android:fontFamily="@font/poppinsbold"
+                            android:text="Orthopedist"
+                            android:textColor="@color/white"
+                            android:textSize="7sp"
+
+
+                            />
+
+                        <TextView
+                            android:id="@+id/takaAvail4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="@font/poppinsextra"
+                            android:text="Tk.600"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                        <Button
+                            style="?attr/borderlessButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:drawableEnd="@drawable/right_arrow"
+                            android:drawablePadding="5dp"
+                            android:fontFamily="@font/poppinsextra"
+                            android:text="See Doctor"
+                            android:textColor="@color/dark_green"
+                            android:textSize="10sp" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </GridLayout>
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </ScrollView>
