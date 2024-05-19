@@ -63,6 +63,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPhone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppinsmedium"
@@ -96,7 +97,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
-
             android:text="Next"
             android:backgroundTint="@color/green"
             android:textColor="@color/white"
@@ -104,7 +104,7 @@
             android:padding="15dp"
             android:textSize="20sp"
             android:fontFamily="@font/poppinsbold"
-            android:id="@+id/login"
+            android:id="@+id/btnNext"
             style="@style/Widget.MaterialComponents.Button.TextButton"
 
             />
@@ -125,6 +125,7 @@
 
                 />
             <Button
+                android:id="@+id/btnLoginPass"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Login by using password"
