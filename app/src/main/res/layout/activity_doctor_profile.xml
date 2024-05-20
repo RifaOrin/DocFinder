@@ -4,19 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DoctorProfileActivity">
+    tools:context=".DoctorProfileActivity"
+    android:background="@color/white">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white">
+        >
         <LinearLayout
+            android:id="@+id/imgDetails"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_margin="20dp">
+            android:padding="20dp"
+            android:background="#FAFAFA">
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
@@ -33,7 +36,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Asst. Prof. Dr. John"
-                    android:textSize="15sp"
+                    android:textSize="18sp"
                     android:fontFamily="@font/poppinsbold"
                     android:textColor="@color/black"
                     />
@@ -44,7 +47,7 @@
                     android:fontFamily="@font/poppinsmedium"
                     android:text="MBBS, DDV (Dermatology)"
                     android:textColor="@color/black"
-                    android:textSize="10sp" />
+                    android:textSize="13sp" />
                 <Button
                     android:id="@+id/dermatologist1"
                     style="@style/Widget.MaterialComponents.Button.TextButton"
@@ -59,6 +62,153 @@
             </LinearLayout>
 
         </LinearLayout>
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/imgDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <LinearLayout
+            android:id="@+id/exprat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal"
+            android:padding="20dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="start">
+            <TextView
+                android:id="@+id/experience"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Experience"
+                android:textSize="12sp"
+                android:fontFamily="@font/poppinsbold"
+                android:textColor="@color/grey"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="10+ years"
+                android:textSize="15sp"
+                android:fontFamily="@font/poppinsbold"
+                android:textColor="@color/black" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="|"
+                android:layout_weight="1"
+                android:gravity="center"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="end"
+                >
+                <TextView
+                    android:id="@+id/rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Rating"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:textColor="@color/grey"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="5 stars"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            
+        </LinearLayout>
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/exprat"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
+            android:id="@+id/work"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/divider2"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Working In"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/grey"
+            android:textSize="12sp"
+            android:fontFamily="@font/poppinsbold"/>
+        <TextView
+            android:id="@+id/hospital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/work"
+            app:layout_constraintStart_toStartOf="@id/work"
+            android:text="Square Hospitals Ltd."
+            android:textSize="15sp"
+            android:fontFamily="@font/poppinsbold"
+            android:textColor="@color/black"
+            android:paddingBottom="10dp"
+            />
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/hospital"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabMode="fixed"
+            app:tabIndicatorColor="@color/dark_green"
+            app:tabIndicatorFullWidth="true"
+            app:tabIndicatorAnimationMode="linear"
+            app:tabTextColor="@color/dark_green"
+            app:layout_constraintTop_toBottomOf="@id/divider3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="#FAFAFA">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Info" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Experience"
+
+
+                />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reviews"
+
+
+                />
+
+        </com.google.android.material.tabs.TabLayout>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
