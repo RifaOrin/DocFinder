@@ -20,7 +20,8 @@
             android:layout_height="90dp"
             android:src="@drawable/logowhite"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:scaleType="centerCrop"/>
 
         <androidx.appcompat.widget.SearchView
             android:id="@+id/searchbar"
@@ -84,7 +85,10 @@
                     android:id="@+id/card1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="8dp">
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:onClick="onCardClicked"
+                    android:focusable="true">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -170,7 +174,10 @@
                     android:id="@+id/card2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="8dp">
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:onClick="onCardClicked"
+                    android:focusable="true">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -256,7 +263,10 @@
                     android:id="@+id/card3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="8dp">
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:onClick="onCardClicked"
+                    android:focusable="true">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -342,7 +352,10 @@
                     android:id="@+id/card4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="8dp">
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:onClick="onCardClicked"
+                    android:focusable="true">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -428,7 +441,10 @@
                     android:id="@+id/card5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="8dp">
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:onClick="onCardClicked"
+                    android:focusable="true">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -889,6 +905,9 @@
                 android:layout_margin="3dp"
                 android:layout_row="0"
                 android:layout_column="0"
+                android:clickable="true"
+                android:onClick="onCardClicked"
+                android:focusable="true"
 
                 >
 
@@ -979,6 +998,9 @@
                 android:layout_margin="3dp"
                 android:layout_row="0"
                 android:layout_column="1"
+                android:clickable="true"
+                android:onClick="onCardClicked"
+                android:focusable="true"
                >
 
                 <LinearLayout
@@ -1068,6 +1090,9 @@
                 android:layout_margin="3dp"
                 android:layout_row="1"
                 android:layout_column="0"
+                android:clickable="true"
+                android:onClick="onCardClicked"
+                android:focusable="true"
                 >
 
                 <LinearLayout
@@ -1157,6 +1182,9 @@
                 android:layout_margin="3dp"
                 android:layout_row="1"
                 android:layout_column="1"
+                android:clickable="true"
+                android:onClick="onCardClicked"
+                android:focusable="true"
                 >
 
                 <LinearLayout
