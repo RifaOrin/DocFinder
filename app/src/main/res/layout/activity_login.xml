@@ -25,6 +25,7 @@
             android:layout_marginTop="12dp"
             android:hint="Phone"
             app:hintTextColor="@color/dark_green"
+            app:boxStrokeColor="@color/dark_green"
             app:endIconTint="@color/dark_green"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
@@ -48,6 +49,7 @@
             android:layout_marginTop="12dp"
             android:hint="Password"
             app:hintTextColor="@color/dark_green"
+            app:boxStrokeColor="@color/dark_green"
             app:endIconMode="password_toggle"
             app:endIconTint="@color/dark_green"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
