@@ -15,7 +15,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".LoginActivity"
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,7 +30,7 @@
             android:name=".OtpPhoneActivity"
             android:exported="false"/>
         <activity
-            android:name=".SplashActivity"
+            android:name=".LoginActivity"
             android:exported="false"/>
         <activity
             android:name=".RegisterActivity"
