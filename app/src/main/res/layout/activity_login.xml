@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
@@ -19,7 +20,7 @@
         </ImageView>
 
         <EditText
-            android:id="@+id/phone"
+            android:id="@+id/etPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Phone"
@@ -33,24 +34,32 @@
             >
 
         </EditText>
-        <EditText
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/password"
-            android:layout_marginTop="12dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
             android:hint="Password"
+            app:hintTextColor="@color/dark_green"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/dark_green"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textColorHint="@color/dark_green"
             android:textSize="20sp"
             android:fontFamily="@font/poppinsbold"
             android:background="@drawable/rounded_corner"
             android:padding="18dp"
-            android:inputType="textPassword"
-            android:drawableEnd="@drawable/pass_icon"
-            >
+            android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        </EditText>
         <Button
+            android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="L O G I N"
@@ -60,13 +69,13 @@
             android:padding="17dp"
             android:textSize="20sp"
             android:fontFamily="@font/poppinsbold"
-            android:id="@+id/login"
         />
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             
             <CheckBox
+                android:id="@+id/cbRemMe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Remember me"
@@ -74,10 +83,11 @@
                 android:alpha="0.7"
                 android:fontFamily="@font/poppinsbold"/>
             <Button
+                android:id="@+id/btnForgotPass"
                 style="?attr/borderlessButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Forgotten password?"
+                android:text="Forgot Password?"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:fontFamily="@font/poppinsbold"
@@ -101,9 +111,10 @@
 
             />
             <Button
+                android:id="@+id/btnLoginPhone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Login by using phone number"
+                android:text="Sign In by using Phone Number"
                 android:textSize="15sp"
                 android:fontFamily="@font/poppinsbold"
                 android:textColor="@color/dark_green"

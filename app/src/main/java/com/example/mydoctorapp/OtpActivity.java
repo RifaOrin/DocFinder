@@ -2,7 +2,6 @@ package com.example.mydoctorapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -23,13 +22,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
-import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Objects;
-import java.util.Timer;
-import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
 
 public class OtpActivity extends AppCompatActivity {
@@ -205,7 +199,8 @@ public class OtpActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 dismissLoadingPopup();
                 if(task.isSuccessful()){
-                    Intent intent = new Intent(OtpActivity.this, MainActivity.class);
+                    Intent intent = new Intent(OtpActivity.this, RegisterActivity.class);
+                    intent.putExtra("phone", phoneNumber);
                     startActivity(intent);
                     finish();
 
