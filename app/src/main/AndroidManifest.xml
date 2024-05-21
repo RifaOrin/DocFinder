@@ -40,7 +40,7 @@
             android:exported="false" />
         <activity
             android:name=".DoctorProfileActivity"
-            android:exported="false />
+            android:exported="false"/>
     </application>
 
 </manifest>

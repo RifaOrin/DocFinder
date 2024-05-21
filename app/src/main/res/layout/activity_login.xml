@@ -18,22 +18,29 @@
             android:src="@drawable/logowhite">
 
         </ImageView>
-
-        <EditText
-            android:id="@+id/etPhone"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
             android:hint="Phone"
-            android:textColor="@color/black"
-            android:textColorHint="@color/dark_green"
-            android:textSize="20sp"
-            android:fontFamily="@font/poppinsbold"
-            android:background="@drawable/rounded_corner"
-            android:padding="18dp"
-            android:inputType="phone"
-            >
+            app:hintTextColor="@color/dark_green"
+            app:endIconTint="@color/dark_green"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-        </EditText>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textColorHint="@color/dark_green"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppinsbold"
+                android:padding="18dp"
+                android:inputType="phone" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/password"
             android:layout_width="match_parent"
@@ -53,7 +60,6 @@
             android:textColorHint="@color/dark_green"
             android:textSize="20sp"
             android:fontFamily="@font/poppinsbold"
-            android:background="@drawable/rounded_corner"
             android:padding="18dp"
             android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -69,6 +75,7 @@
             android:padding="17dp"
             android:textSize="20sp"
             android:fontFamily="@font/poppinsbold"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
         />
         <RelativeLayout
             android:layout_width="match_parent"
