@@ -30,19 +30,21 @@ public class OtpPhoneActivity extends AppCompatActivity {
         btnNext = findViewById(R.id.btnNext);
         btnLoginPass = findViewById(R.id.btnLoginPass);
 
-        btnNext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String phoneNumber = etPhone.getText().toString().trim();
-                if (phoneNumber.length() == 10 && phoneNumber.startsWith("1")) {
-                    String fullPhoneNumber = "+880" + phoneNumber;
-                    Intent intent = new Intent(OtpPhoneActivity.this, OtpActivity.class);
-                    intent.putExtra("phone", fullPhoneNumber);
-                    startActivity(intent);
-                } else {
-                    Toast.makeText(OtpPhoneActivity.this, "Invalid Phone Number", Toast.LENGTH_SHORT).show();
-                }
+        btnNext.setOnClickListener(v -> {
+            String phoneNumber = etPhone.getText().toString().trim();
+            if (phoneNumber.length() == 10 && phoneNumber.startsWith("1")) {
+                String fullPhoneNumber = "+880" + phoneNumber;
+                Intent intent = new Intent(OtpPhoneActivity.this, OtpActivity.class);
+                intent.putExtra("phone", fullPhoneNumber);
+                startActivity(intent);
+            } else {
+                Toast.makeText(OtpPhoneActivity.this, "Invalid Phone Number", Toast.LENGTH_SHORT).show();
             }
+        });
+
+        btnLoginPass.setOnClickListener(v -> {
+            Intent i = new Intent(OtpPhoneActivity.this, LoginActivity.class);
+            startActivity(i);
         });
     }
 
