@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DoctorOverviewActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Overview"
+            app:navigationIcon="@drawable/back_arrow"
+            android:background="#FAFAFA"
+            app:titleTextColor="@color/black"
+            app:titleTextAppearance="@style/ToolbarTitleTextAppearance"
+            android:paddingStart="8dp"
+            />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/imgDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appbar"
+            android:padding="20dp"
+            android:background="#FAFAFA">
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:srcCompat="@drawable/doctor1"
+                android:scaleType="centerInside">
+            </ImageView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Asst. Prof. Dr. John"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:textColor="@color/black"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="MBBS, DDV (Dermatology)"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+                <TextView
+                    android:id="@+id/dermatologist1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Dermatologist"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:layout_marginTop="7dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/imgDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvPatientInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:text="Patient Info"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinsmedium"/>
+        <TextView
+            android:id="@+id/tvPatientNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvPatientInfo"
+            app:layout_constraintStart_toStartOf="@+id/tvPatientInfo"
+            android:drawableStart="@drawable/baseline_account_box_24"
+            android:text="01711453109"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="7dp"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/poppinsbold"
+            android:layout_marginBottom="20dp"/>
+
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvPatientNum"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:id="@+id/tvConsultationDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/divider1"
+            app:layout_constraintStart_toStartOf="@id/tvPatientInfo"
+            android:text="Consultation Details"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinsmedium"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+        <LinearLayout
+            android:id="@+id/tvAppointment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/tvConsultationDetails"
+            app:layout_constraintStart_toStartOf="@id/tvPatientInfo"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/calender"
+                android:gravity="center_vertical"
+                android:paddingEnd="6dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Schedule an appointment"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/poppinsbold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tvAppointmentDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/tvAppointment"
+            app:layout_constraintStart_toStartOf="@id/tvPatientInfo"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="May 23, 2024 | 08:30 PM"
+                android:textSize="15sp"
+                android:textColor="@color/grey"
+                android:fontFamily="@font/poppinsmedium"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/editing"
+                android:gravity="center_horizontal"
+                android:paddingStart="6dp" />
+        </LinearLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvAppointmentDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/tvPaymentDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/divider3"
+            app:layout_constraintStart_toStartOf="@id/tvPatientInfo"
+            android:text="Payment Details"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinsmedium"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+        <TextView
+            android:id="@+id/tvConsult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvPaymentDetails"
+            app:layout_constraintStart_toStartOf="@id/tvPatientInfo"
+            android:text="Consultation Fee"
+            android:textSize="15sp"
+            android:textColor="@color/grey"
+            android:fontFamily="@font/poppinsmedium"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"/>
+        <TextView
+            android:id="@+id/tvVat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvConsult"
+            app:layout_constraintStart_toStartOf="@id/tvConsult"
+            android:text="VAT (5%)"
+            android:textSize="15sp"
+            android:textColor="@color/grey"
+            android:fontFamily="@font/poppinsmedium"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"/>
+        <TextView
+            android:id="@+id/tvPlatform"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvVat"
+            app:layout_constraintStart_toStartOf="@id/tvVat"
+            android:text="Platform Fee"
+            android:textSize="15sp"
+            android:textColor="@color/grey"
+            android:fontFamily="@font/poppinsmedium"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:id="@+id/tvConsultTaka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Tk. 380.95"
+            android:textColor="@color/grey"
+            android:textSize="15sp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@id/tvConsult"
+            app:layout_constraintTop_toBottomOf="@id/tvPaymentDetails" />
+
+        <TextView
+            android:id="@+id/tvVatTaka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvConsultTaka"
+            app:layout_constraintStart_toStartOf="@id/tvConsultTaka"
+            app:layout_constraintEnd_toEndOf="@id/tvConsultTaka"
+            app:layout_constraintHorizontal_bias="0.898"
+            android:text="Tk.19.05"
+            android:textSize="15sp"
+            android:textColor="@color/grey"
+            android:fontFamily="@font/poppinsmedium"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"/>
+        <TextView
+            android:id="@+id/tvPlatformTaka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tk. 4"
+            app:layout_constraintTop_toBottomOf="@id/tvVatTaka"
+            app:layout_constraintStart_toStartOf="@id/tvConsultTaka"
+            app:layout_constraintEnd_toEndOf="@id/tvConsultTaka"
+            app:layout_constraintHorizontal_bias="0.898"
+            android:textSize="15sp"
+            android:textColor="@color/grey"
+            android:fontFamily="@font/poppinsmedium"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"/>
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvPlatformTaka"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:id="@+id/tvNetAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/divider2"
+            app:layout_constraintStart_toStartOf="@id/tvVat"
+            android:text="Net Amount"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinsbold"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"/>
+        <TextView
+            android:id="@+id/tvNetAmountTaka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tk. 404"
+            app:layout_constraintTop_toBottomOf="@id/divider2"
+            app:layout_constraintStart_toStartOf="@id/tvConsultTaka"
+            app:layout_constraintEnd_toEndOf="@id/tvConsultTaka"
+            app:layout_constraintHorizontal_bias="0.898"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinsbold"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="50dp"/>
+        <Button
+            app:layout_constraintTop_toBottomOf="@id/tvNetAmountTaka"
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pay now"
+            android:backgroundTint="@color/green"
+            android:textColor="@color/white"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:padding="17dp"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppinsbold"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    
+
+</ScrollView>
