@@ -130,6 +130,7 @@ public class LoginActivity extends AppCompatActivity {
                             String password = document.getString("password");
 
                             if (userPhone.equals(phone_number) && userPassword.equals(password)) {
+                                preferenceManager.saveUser(phone_number, password);
                                 runOnUiThread(new Runnable() {
                                     public void run() {
                                         dismissLoadingPopup();

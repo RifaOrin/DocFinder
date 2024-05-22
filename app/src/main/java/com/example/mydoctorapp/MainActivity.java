@@ -5,6 +5,7 @@ import static android.content.ContentValues.TAG;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -69,6 +70,15 @@ public class MainActivity extends AppCompatActivity {
             int imageId = getResources().getIdentifier("doctor" + (i + 1), "drawable", getPackageName());
             doctorImage.setImageResource(imageId);
             cardContainer.addView(cardView);
+
+            Button btnSeeDoctor = cardView.findViewById(R.id.btnSeeDoctor);
+            btnSeeDoctor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(MainActivity.this, DoctorProfileActivity.class);
+                    startActivity(intent);
+                }
+            });
         }
     }
 
