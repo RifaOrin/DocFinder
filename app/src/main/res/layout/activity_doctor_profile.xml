@@ -19,6 +19,7 @@
             android:padding="20dp"
             android:background="#FAFAFA">
             <ImageView
+                android:id="@+id/doctorImage"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 app:srcCompat="@drawable/doctor1"
@@ -31,6 +32,7 @@
                 android:orientation="vertical"
                 >
                 <TextView
+                    android:id="@+id/doctorName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Asst. Prof. Dr. John"
@@ -39,6 +41,7 @@
                     android:textColor="@color/black"
                     />
                 <TextView
+                    android:id="@+id/doctorQualification"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
@@ -47,7 +50,7 @@
                     android:textColor="@color/black"
                     android:textSize="13sp" />
                 <Button
-                    android:id="@+id/dermatologist1"
+                    android:id="@+id/doctorSpeciality"
                     style="@style/Widget.MaterialComponents.Button.TextButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

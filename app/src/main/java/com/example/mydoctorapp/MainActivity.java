@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
             doctorFee.setText(doctor.getFee());
             ImageView doctorImage = cardView.findViewById(R.id.doctorImage);
             int imageId = getResources().getIdentifier("doctor" + (i + 1), "drawable", getPackageName());
+            System.out.println("imageId from MainActivity" + imageId);
             doctorImage.setImageResource(imageId);
             cardContainer.addView(cardView);
 
@@ -76,6 +77,10 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(MainActivity.this, DoctorProfileActivity.class);
+                    intent.putExtra("name", doctor.getName());
+                    intent.putExtra("qualification", doctor.getQualification());
+                    intent.putExtra("speciality", doctor.getSpeciality());
+                    intent.putExtra("imageId", imageId);
                     startActivity(intent);
                 }
             });
