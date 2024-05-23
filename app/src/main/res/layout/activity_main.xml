@@ -21,7 +21,8 @@
             android:src="@drawable/logowhite"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:scaleType="centerCrop"/>
+            android:scaleType="centerCrop"
+            android:layout_marginTop="10dp"/>
 
         <androidx.appcompat.widget.SearchView
             android:id="@+id/searchbar"
@@ -328,7 +329,7 @@
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:scaleType="centerInside"
-                        app:srcCompat="@drawable/doctoricon" />
+                        app:srcCompat="@drawable/shin" />
 
                     <TextView
                         android:layout_width="80dp"
@@ -336,7 +337,7 @@
                         android:layout_marginTop="10dp"
                         android:gravity="center"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="Physician"
+                        android:text="Orthopedics"
                         android:textColor="@color/black"
                         android:textSize="12sp"/>
                 </LinearLayout>

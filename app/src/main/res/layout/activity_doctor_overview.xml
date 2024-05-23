@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:title="Overview"
-            app:navigationIcon="@drawable/back_arrow"
+            app:navigationIcon="@drawable/back"
             android:background="#FAFAFA"
             app:titleTextColor="@color/black"
             app:titleTextAppearance="@style/ToolbarTitleTextAppearance"
@@ -52,7 +52,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="2dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="4dp"
                 android:orientation="vertical"
                 >
                 <TextView
