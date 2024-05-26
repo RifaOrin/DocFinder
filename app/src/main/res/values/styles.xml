@@ -9,4 +9,5 @@
         <item name="fontFamily">@font/poppinsbold</item>
         <item name="android:gravity">center_horizontal</item>
     </style>
+
 </resources>

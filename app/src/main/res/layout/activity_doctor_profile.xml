@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,7 +7,50 @@
     android:layout_height="match_parent"
     tools:context=".DoctorProfileActivity"
     android:background="@color/white">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:liftOnScroll="true">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp">
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/back"
+                app:layout_constraintEnd_toStartOf="@+id/tvProfile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvProfile"
+                app:layout_constraintBottom_toBottomOf="@+id/tvProfile" />
+            <TextView
+                android:id="@+id/tvProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/backButton"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="Profile"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppinsbold"
+                android:layout_marginLeft="20dp"
+                />
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
         <LinearLayout
             android:id="@+id/imgDetails"
             android:layout_width="match_parent"
@@ -119,7 +162,7 @@
                     android:id="@+id/rating"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Total Rating"
+                    android:text="Total Patients"
                     android:textSize="12sp"
                     android:fontFamily="@font/poppinsbold"
                     android:textColor="@color/grey"
@@ -128,7 +171,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="5 stars"
+                    android:text="100+"
                     android:textSize="15sp"
                     android:fontFamily="@font/poppinsbold"
                     android:textColor="@color/black" />
@@ -201,11 +244,7 @@
                 android:text="Experience"
                 />
 
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Reviews"
-                />
+
         </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager.widget.ViewPager
@@ -216,5 +255,69 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:minHeight="56dp"
+        android:backgroundTint="@color/white"
+        app:addElevationShadow="true"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/consultationFee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Consultation Fee"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppinsbold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/feeAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TK. 350"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppinsextra"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/consultationFee"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <Button
+                android:id="@+id/seeDoctorNowButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="See doctor now"
+                android:textSize="15sp"
+                android:fontFamily="@font/poppinsbold"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/green"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/consultationFee"
+                app:layout_constraintBottom_toBottomOf="parent"
+                style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
 

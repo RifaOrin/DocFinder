@@ -48,7 +48,7 @@ public class DoctorProfileActivity extends AppCompatActivity {
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(), 0);
         viewPagerAdapter.addFragment(new InfoFragment(), "Info");
         viewPagerAdapter.addFragment(new ExperienceFragment(), "Experience");
-        viewPagerAdapter.addFragment(new ReviewsFragment(), "Reviews");
+
         viewPager.setAdapter(viewPagerAdapter);
 
         tabLayout.setupWithViewPager(viewPager);

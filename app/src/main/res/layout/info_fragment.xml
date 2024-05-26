@@ -1,19 +1,168 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".InfoFragment">
 
     <TextView
+        android:id="@+id/glance"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello, this is the Info tab!"
-        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="At a Glance"
+        android:textColor="@color/dark_green"
         android:textSize="18sp"
-        android:gravity="center_horizontal"
-        android:padding="16dp" />
+        android:fontFamily="@font/poppinsbold"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"/>
+    <LinearLayout
+        android:id="@+id/consultTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/glance"
+        app:layout_constraintStart_toStartOf="@id/glance"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        android:background="#E3ECE4"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:padding="20dp">
+    <LinearLayout
+        android:id="@+id/tvAppointment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="7dp"
+        >
 
-    <!-- Add more views as needed -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/calender"
+            android:gravity="center_vertical"
+            android:paddingEnd="6dp" />
 
-</LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Appointment Consultation Time"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/poppinsbold" />
+    </LinearLayout>
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sun - Tue (5:00 PM - 9:00 PM)"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinsmedium"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/consultFee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/consultTime"
+        app:layout_constraintStart_toStartOf="@id/consultTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        android:background="#E3ECE4"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:padding="20dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Consultation Fee"
+            android:textSize="15sp"
+            android:textColor="@color/grey"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/poppinsbold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tk. 350"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinsmedium"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Patient attended"
+            android:textSize="15sp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/grey"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/poppinsbold" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinsmedium"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Follow-up Fee"
+            android:textSize="15sp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/grey"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/poppinsbold" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tk. 205"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinsmedium"
+            />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/consultFee"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="About Doctor"
+        android:textColor="@color/dark_green"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppinsbold"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/about"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="akhane likhba"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:fontFamily="@font/poppinsmedium"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
