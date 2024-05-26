@@ -28,7 +28,7 @@
             android:text="Square Hospitals Ltd."
             android:layout_marginLeft="5dp"
             android:layout_marginTop="10dp"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textColor="@color/black"
             android:gravity="center_vertical"
             android:fontFamily="@font/poppinsextra" />
@@ -50,7 +50,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Designation"
-                    android:textSize="18sp"
+                    android:textSize="15sp"
                     android:textColor="@color/grey"
                     android:gravity="center_vertical"
                     android:fontFamily="@font/poppinsbold" />
@@ -58,7 +58,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Dermatologist &amp; SMO"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:textColor="@color/black"
                     android:gravity="center_vertical"
                     android:fontFamily="@font/poppinsmedium" />
@@ -76,7 +76,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Department"
-                    android:textSize="18sp"
+                    android:textSize="15sp"
                     android:textColor="@color/grey"
                     android:gravity="center_vertical"
                     android:fontFamily="@font/poppinsbold" />
@@ -84,7 +84,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Medical Center"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:textColor="@color/black"
                     android:gravity="center_vertical"
                     android:fontFamily="@font/poppinsmedium" />
@@ -101,7 +101,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Employment Status"
-                    android:textSize="18sp"
+                    android:textSize="15sp"
                     android:textColor="@color/grey"
                     android:gravity="center_vertical"
                     android:fontFamily="@font/poppinsbold" />
@@ -109,7 +109,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Feb 5, 2016 - Present"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:textColor="@color/black"
                     android:gravity="center_vertical"
                     android:fontFamily="@font/poppinsmedium" />
@@ -126,7 +126,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Period"
-                    android:textSize="18sp"
+                    android:textSize="15sp"
                     android:textColor="@color/grey"
                     android:gravity="center_vertical"
                     android:fontFamily="@font/poppinsbold" />
@@ -134,7 +134,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="6 years"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:textColor="@color/black"
                     android:gravity="center_vertical"
                     android:fontFamily="@font/poppinsmedium" />
