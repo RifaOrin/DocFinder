@@ -16,15 +16,18 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".bottom"
-            android:exported="false"
-            android:label="@string/title_activity_bottom" />
+            android:name=".AppointmentListActivity"
+            android:exported="false" />
         <activity
             android:name=".BottomNavigationActivity"
             android:exported="false"
             android:label="@string/title_activity_bottom_navigation" />
         <activity
-            android:name=".ProfilePageActivity"
+            android:name=".bottom"
+            android:exported="false"
+            android:label="@string/title_activity_bottom" />
+        <activity
+            android:name=".MoreActivity"
             android:exported="false" />
         <activity
             android:name=".DoctorAppointmentActivity"

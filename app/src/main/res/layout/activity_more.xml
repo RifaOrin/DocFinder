@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfilePageActivity">
+    tools:context=".MoreActivity">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/topAppBar"
         android:layout_width="match_parent"
@@ -54,7 +54,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:src="@drawable/woman"
-            android:layout_marginTop="30dp"/>
+            android:layout_marginTop="30dp"
+            />
         <Button
             android:id="@+id/profile"
             android:layout_width="match_parent"
@@ -62,7 +63,7 @@
             app:layout_constraintTop_toBottomOf="@id/profilePic"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="25dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="70dp"
             android:text="Profile"
             android:textColor="@color/black"
             android:textSize="20sp"
@@ -86,18 +87,33 @@
             android:fontFamily="@font/poppinsbold"
             android:gravity="start"
             android:background="?attr/selectableItemBackgroundBorderless"/>
+
+        <Button
+            android:id="@+id/cP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/updateProfile"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="25dp"
+            android:drawableLeft="@drawable/padlock"
+            android:drawableRight="@drawable/baseline_arrow_forward_ios_24"
+            android:text="Change Password"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppinsbold"
+            android:gravity="start"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
         <Button
             android:id="@+id/logout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/updateProfile"
+            app:layout_constraintTop_toBottomOf="@id/cP"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="25dp"
             android:drawableLeft="@drawable/logout"
             android:text="Logout"
             android:textColor="@color/black"
             android:textSize="20sp"
-
             android:fontFamily="@font/poppinsbold"
             android:gravity="start"
             android:background="?attr/selectableItemBackgroundBorderless"/>
