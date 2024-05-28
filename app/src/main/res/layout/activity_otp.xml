@@ -64,7 +64,7 @@
                 android:inputType="number"
                 android:maxLength="1"
                 android:textColor="@color/black"
-                android:textSize="30sp"
+                android:textSize="18sp"
                 tools:ignore="labelFor"
                 android:fontFamily="@font/poppinsbold"/>
             <EditText
@@ -79,7 +79,7 @@
                 android:inputType="number"
                 android:maxLength="1"
                 android:textColor="@color/black"
-                android:textSize="30sp"
+                android:textSize="18sp"
                 tools:ignore="labelFor"
                 android:fontFamily="@font/poppinsbold"/>
             <EditText
@@ -94,7 +94,7 @@
                 android:inputType="number"
                 android:maxLength="1"
                 android:textColor="@color/black"
-                android:textSize="30sp"
+                android:textSize="18sp"
                 tools:ignore="labelFor"
                 android:fontFamily="@font/poppinsbold"/>
             <EditText
@@ -109,7 +109,7 @@
                 android:inputType="number"
                 android:maxLength="1"
                 android:textColor="@color/black"
-                android:textSize="30sp"
+                android:textSize="18sp"
                 tools:ignore="labelFor"
                 android:fontFamily="@font/poppinsbold"/>
             <EditText
@@ -124,7 +124,7 @@
                 android:inputType="number"
                 android:maxLength="1"
                 android:textColor="@color/black"
-                android:textSize="30sp"
+                android:textSize="18sp"
                 tools:ignore="labelFor"
                 android:fontFamily="@font/poppinsbold"/>
             <EditText
@@ -139,7 +139,7 @@
                 android:inputType="number"
                 android:maxLength="1"
                 android:textColor="@color/black"
-                android:textSize="30sp"
+                android:textSize="18sp"
                 tools:ignore="labelFor"
                 android:fontFamily="@font/poppinsbold"/>
 

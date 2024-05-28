@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/popup_background">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:hint="Enter Bkash Number"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:fontFamily="@font/poppinsmedium"
+            android:padding="8dp"
+            android:gravity="center"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textViewAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Amount: $0.00"
+        android:fontFamily="@font/poppinsmedium"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:padding="8dp"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/buttonPayNow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pay Now"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppinsbold"
+        android:backgroundTint="@color/green"
+        style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+</LinearLayout>
