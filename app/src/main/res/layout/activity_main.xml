@@ -164,7 +164,7 @@
 
             <!-- First Card -->
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/dept1"
+                android:id="@+id/deptMedicine"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="0"
@@ -199,7 +199,7 @@
 
             <!-- Second Card -->
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/dept2"
+                android:id="@+id/deptPediatrics"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="0"
@@ -234,7 +234,7 @@
 
             <!-- Third Card -->
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/dept3"
+                android:id="@+id/deptDermatology"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="0"
@@ -269,7 +269,7 @@
 
             <!-- Fourth Card -->
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/dept4"
+                android:id="@+id/deptGastrology"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="0"
@@ -304,7 +304,7 @@
 
             <!-- Fifth Card -->
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/dept5"
+                android:id="@+id/deptNeurology"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="1"
@@ -339,7 +339,7 @@
 
             <!-- Sixth Card -->
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/dept6"
+                android:id="@+id/deptOrthopedics"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="1"
@@ -372,7 +372,7 @@
 
             </com.google.android.material.card.MaterialCardView>
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/dept7"
+                android:id="@+id/deptCardiology"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="1"
@@ -405,7 +405,7 @@
 
             </com.google.android.material.card.MaterialCardView>
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/dept8"
+                android:id="@+id/deptGynae"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="1"

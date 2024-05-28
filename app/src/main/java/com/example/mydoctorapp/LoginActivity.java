@@ -53,7 +53,9 @@ public class LoginActivity extends AppCompatActivity {
         cbRemMe.setChecked(preferenceManager.getRememberMe());
         if(preferenceManager.getRememberMe()){
             String spPhoneNumber = preferenceManager.getPhoneNumber();
+            String spPassword = preferenceManager.getPassword();
             etPhone.setText(spPhoneNumber);
+            etPassword.setText(spPassword);
         }
 
         loginPassInputLayout.setEndIconOnClickListener(new View.OnClickListener() {
