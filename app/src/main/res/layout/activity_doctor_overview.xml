@@ -28,6 +28,8 @@
                     android:layout_height="wrap_content"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:src="@drawable/back"
+                    android:clickable="true"
+                    android:focusable="true"
                     app:layout_constraintEnd_toStartOf="@+id/tvProfile"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@id/tvProfile"
