@@ -3,11 +3,13 @@ package com.example.mydoctorapp;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageButton;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -21,8 +23,9 @@ import java.util.Objects;
 
 public class DoctorProfileActivity extends AppCompatActivity {
     private ImageView doctorImage;
-    private TextView doctorName, doctorQualification;
-    private Button doctorSpeciality;
+    private TextView doctorName, doctorQualification, doctorExperience, doctorFee, doctorWork;
+    private Button doctorSpeciality, btnNext;
+    private AppCompatImageButton backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +36,11 @@ public class DoctorProfileActivity extends AppCompatActivity {
         doctorName = findViewById(R.id.doctorName);
         doctorQualification = findViewById(R.id.doctorQualification);
         doctorSpeciality = findViewById(R.id.doctorSpeciality);
+        doctorExperience = findViewById(R.id.tvExperience);
+        doctorFee = findViewById(R.id.feeAmount);
+        doctorWork = findViewById(R.id.tvHospital);
+        btnNext = findViewById(R.id.btnNext);
+        backButton = findViewById(R.id.backButton);
 
         int givenImageId = getIntent().getIntExtra("imageId", 1);
         System.out.println("Image ID from Doctor's Profile: " + givenImageId);
@@ -40,18 +48,45 @@ public class DoctorProfileActivity extends AppCompatActivity {
         doctorImage.setImageResource(givenImageId);
         doctorName.setText(getIntent().getExtras().getString("name"));
         doctorQualification.setText(getIntent().getExtras().getString("qualification"));
-        doctorSpeciality.setText(getIntent().getExtras().getString("speciality"));
+        String designation = getIntent().getExtras().getString("speciality");
+        doctorSpeciality.setText(designation);
+        doctorExperience.setText(getIntent().getExtras().getString("experience"));
+        String feeAmount = getIntent().getExtras().getString("fee");
+        doctorFee.setText(feeAmount);
+        String work = getIntent().getExtras().getString("work");
+        doctorWork.setText(work);
 
         ViewPager viewPager = findViewById(R.id.viewPager);
         TabLayout tabLayout = findViewById(R.id.tabLayout);
 
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(), 0);
-        viewPagerAdapter.addFragment(new InfoFragment(), "Info");
-        viewPagerAdapter.addFragment(new ExperienceFragment(), "Experience");
+
+        Bundle bundle = new Bundle();
+        bundle.putString("feeAmount", feeAmount);
+        InfoFragment infoFragment = new InfoFragment();
+        infoFragment.setArguments(bundle);
+
+        Bundle bundle1 = new Bundle();
+        bundle1.putString("designation", designation);
+        bundle1.putString("work", work);
+        ExperienceFragment experienceFragment = new ExperienceFragment();
+        experienceFragment.setArguments(bundle1);
+
+        viewPagerAdapter.addFragment(infoFragment, "Info");
+        viewPagerAdapter.addFragment(experienceFragment, "Experience");
 
         viewPager.setAdapter(viewPagerAdapter);
 
         tabLayout.setupWithViewPager(viewPager);
+
+        btnNext.setOnClickListener(v -> {
+            Intent i = new Intent(DoctorProfileActivity.this, DoctorOverviewActivity.class);
+            startActivity(i);
+        });
+
+        backButton.setOnClickListener(v -> {
+            finish();
+        });
     }
 
     public class ViewPagerAdapter extends FragmentPagerAdapter {
