@@ -25,10 +25,7 @@
             android:name=".BottomNavigationActivity"
             android:exported="false"
             android:label="@string/title_activity_bottom_navigation" />
-        <activity
-            android:name=".bottom"
-            android:exported="false"
-            android:label="@string/title_activity_bottom" />
+
         <activity
             android:name=".MoreActivity"
             android:exported="false" />

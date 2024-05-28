@@ -95,6 +95,7 @@
             android:fontFamily="@font/poppinsbold" />
 
         <TextView
+            android:id="@+id/tvConsultationFee"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tk. 350"
@@ -136,7 +137,7 @@
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tk. 205"
+            android:text="Tk. 500"
             android:textSize="18sp"
             android:textColor="@color/black"
             android:fontFamily="@font/poppinsmedium"
@@ -159,7 +160,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/about"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="akhane likhba"
+        android:text="Highly Experienced"
         android:textColor="@color/black"
         android:textSize="15sp"
         android:fontFamily="@font/poppinsmedium"

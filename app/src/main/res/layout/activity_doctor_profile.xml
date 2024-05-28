@@ -29,10 +29,12 @@
                     android:layout_height="wrap_content"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:src="@drawable/back"
+                    android:clickable="true"
                     app:layout_constraintEnd_toStartOf="@+id/tvProfile"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@id/tvProfile"
-                    app:layout_constraintBottom_toBottomOf="@+id/tvProfile" />
+                    app:layout_constraintBottom_toBottomOf="@+id/tvProfile"
+                    android:focusable="true" />
                 <TextView
                     android:id="@+id/tvProfile"
                     android:layout_width="wrap_content"
@@ -145,6 +147,7 @@
                         android:fontFamily="@font/poppinsbold"
                         android:textColor="@color/grey"/>
                     <TextView
+                        android:id="@+id/tvExperience"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
@@ -207,7 +210,7 @@
                 android:textSize="12sp"
                 android:fontFamily="@font/poppinsbold"/>
             <TextView
-                android:id="@+id/hospital"
+                android:id="@+id/tvHospital"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@+id/work"
@@ -222,7 +225,7 @@
                 android:id="@+id/divider3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/hospital"
+                app:layout_constraintTop_toBottomOf="@id/tvHospital"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
             <com.google.android.material.tabs.TabLayout
@@ -311,11 +314,11 @@
                         />
 
                     <Button
-                        android:id="@+id/seeDoctorNowButton"
+                        android:id="@+id/btnNext"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="See doctor now"
-                        android:textSize="15sp"
+                        android:text="Book An Appointment"
+                        android:textSize="12sp"
                         android:fontFamily="@font/poppinsbold"
                         android:paddingLeft="20dp"
                         android:paddingRight="20dp"
