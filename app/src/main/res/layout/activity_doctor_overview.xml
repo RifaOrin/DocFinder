@@ -40,7 +40,7 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintStart_toEndOf="@id/backButton"
                     app:layout_constraintTop_toTopOf="parent"
-                    android:text="Overview"
+                    android:text="Appointment"
                     android:textSize="20sp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/poppinsbold"
@@ -64,6 +64,7 @@
             android:padding="20dp"
             android:background="#FAFAFA">
             <ImageView
+                android:id="@+id/doctorImage"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 app:srcCompat="@drawable/doctor1"
@@ -77,6 +78,7 @@
                 android:orientation="vertical"
                 >
                 <TextView
+                    android:id="@+id/doctorName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Asst. Prof. Dr. John"
@@ -85,6 +87,7 @@
                     android:textColor="@color/black"
                     />
                 <TextView
+                    android:id="@+id/doctorQualification"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
@@ -93,7 +96,7 @@
                     android:textColor="@color/black"
                     android:textSize="13sp" />
                 <TextView
-                    android:id="@+id/dermatologist1"
+                    android:id="@+id/doctorSpeciality"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppinsmedium"
@@ -172,11 +175,14 @@
             android:layout_marginBottom="20dp">
 
             <ImageView
+                android:id="@+id/tvAppointmentTimeDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/calender"
                 android:gravity="center_vertical"
-                android:paddingEnd="6dp" />
+                android:paddingEnd="6dp"
+                android:clickable="true"
+                android:focusable="true"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -189,39 +195,13 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/tvAppointmentDetails"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@id/tvAppointment"
-            app:layout_constraintStart_toStartOf="@id/tvPatientInfo"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="20dp">
 
-            <TextView
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="May 23, 2024 | 08:30 PM"
-                android:textSize="15sp"
-                android:textColor="@color/grey"
-                android:fontFamily="@font/poppinsmedium"
-                />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/editing"
-                android:gravity="center_horizontal"
-                android:paddingStart="6dp" />
-        </LinearLayout>
 
         <com.google.android.material.divider.MaterialDivider
             android:id="@+id/divider3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/tvAppointmentDetails"
+            app:layout_constraintTop_toBottomOf="@id/tvAppointment"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="20dp"/>
@@ -256,7 +236,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/tvConsult"
             app:layout_constraintStart_toStartOf="@id/tvConsult"
-            android:text="VAT (5%)"
+            android:text="VAT (15%)"
             android:textSize="15sp"
             android:textColor="@color/grey"
             android:fontFamily="@font/poppinsmedium"
@@ -304,11 +284,12 @@
             android:fontFamily="@font/poppinsmedium"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="20dp"/>
+
         <TextView
             android:id="@+id/tvPlatformTaka"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tk. 4"
+            android:text="Tk. 20"
             app:layout_constraintTop_toBottomOf="@id/tvVatTaka"
             app:layout_constraintStart_toStartOf="@id/tvConsultTaka"
             app:layout_constraintEnd_toEndOf="@id/tvConsultTaka"
@@ -318,6 +299,7 @@
             android:fontFamily="@font/poppinsmedium"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="20dp"/>
+
         <com.google.android.material.divider.MaterialDivider
             android:id="@+id/divider2"
             android:layout_width="match_parent"
@@ -352,9 +334,10 @@
             android:fontFamily="@font/poppinsbold"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="50dp"/>
+
         <Button
             app:layout_constraintTop_toBottomOf="@id/tvNetAmountTaka"
-            android:id="@+id/btnLogin"
+            android:id="@+id/btnPayNow"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Pay now"
@@ -363,16 +346,10 @@
             android:layout_marginTop="50dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:padding="10dp"
+            android:padding="17dp"
             android:textSize="20sp"
             android:fontFamily="@font/poppinsbold"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             />
-
-
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-    
-
 </ScrollView>

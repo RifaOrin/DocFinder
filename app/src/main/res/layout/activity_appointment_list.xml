@@ -30,6 +30,8 @@
                     android:layout_height="wrap_content"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:src="@drawable/back"
+                    android:clickable="true"
+                    android:focusable="true"
                     app:layout_constraintEnd_toStartOf="@+id/tvAppoint"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@id/tvAppoint"
@@ -56,167 +58,13 @@
             android:layout_height="0dp"
             app:layout_constraintTop_toBottomOf="@id/topAppBar"
             app:layout_constraintBottom_toBottomOf="parent">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/appointDescription"
+            <LinearLayout
+                android:id="@+id/card_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/aboutPatient"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:background="#E3ECE4"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="30dp"
-                android:padding="20dp">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="20dp">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Doctor Name:"
-                        android:textSize="15sp"
-                        android:textColor="@color/black"
-                        android:gravity="center_vertical"
-                        android:fontFamily="@font/poppinsbold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Asst. Prof. Dr. John"
-                        android:textSize="15sp"
-                        android:textColor="@color/black"
-                        android:gravity="end"
-                        android:fontFamily="@font/poppinsbold"
-                        android:paddingLeft="8dp"/>
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/tvName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="7dp"
-                    >
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Patient Name:"
-                        android:textSize="15sp"
-                        android:textColor="@color/black"
-                        android:gravity="start"
-                        android:fontFamily="@font/poppinsbold"
-                        android:paddingRight="8dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Rifa Tasnim Orin"
-                        android:textSize="15sp"
-                        android:textColor="@color/black"
-                        android:gravity="end"
-                        android:fontFamily="@font/poppinsmedium"
-                        android:paddingLeft="8dp"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:id="@+id/tvAppointDate"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="7dp"
-                    >
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Appointment Date:"
-                        android:textSize="15sp"
-                        android:textColor="@color/black"
-                        android:gravity="start"
-                        android:fontFamily="@font/poppinsbold"
-                        android:paddingRight="8dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="22/06/2024"
-                        android:textSize="15sp"
-                        android:textColor="@color/black"
-                        android:gravity="end"
-                        android:fontFamily="@font/poppinsmedium"
-                        android:paddingLeft="8dp"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:id="@+id/tvAppointmentTime"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="7dp"
-                    >
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Appointment Time:"
-                        android:textSize="15sp"
-                        android:textColor="@color/black"
-                        android:gravity="start"
-                        android:fontFamily="@font/poppinsbold"
-                        android:paddingRight="8dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="06:30 PM"
-                        android:textSize="15sp"
-                        android:textColor="@color/black"
-                        android:gravity="end"
-                        android:fontFamily="@font/poppinsmedium"
-                        android:paddingLeft="8dp"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:id="@+id/tvDivision"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="7dp"
-                    >
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Consultation Fee:"
-                        android:textSize="15sp"
-                        android:textColor="@color/black"
-                        android:gravity="start"
-                        android:fontFamily="@font/poppinsbold"
-                        android:paddingRight="8dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="TK. 350"
-                        android:textSize="15sp"
-                        android:textColor="@color/black"
-                        android:gravity="end"
-                        android:fontFamily="@font/poppinsmedium"
-                        android:paddingLeft="8dp"/>
-                </LinearLayout>
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
+                android:orientation="vertical"
+                android:padding="8dp">
+            </LinearLayout>
         </androidx.core.widget.NestedScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

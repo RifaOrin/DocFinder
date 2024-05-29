@@ -27,6 +27,9 @@ public class DoctorProfileActivity extends AppCompatActivity {
     private Button doctorSpeciality, btnNext;
     private AppCompatImageButton backButton;
 
+    private String extraName, extraQualification, designation, extraExperience, feeAmount, work;
+    private int extraImageId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,18 +45,27 @@ public class DoctorProfileActivity extends AppCompatActivity {
         btnNext = findViewById(R.id.btnNext);
         backButton = findViewById(R.id.backButton);
 
-        int givenImageId = getIntent().getIntExtra("imageId", 1);
-        System.out.println("Image ID from Doctor's Profile: " + givenImageId);
+        extraImageId = getIntent().getIntExtra("imageId", 1);
+        System.out.println("Image ID from Doctor's Profile: " + extraImageId);
 
-        doctorImage.setImageResource(givenImageId);
-        doctorName.setText(getIntent().getExtras().getString("name"));
-        doctorQualification.setText(getIntent().getExtras().getString("qualification"));
-        String designation = getIntent().getExtras().getString("speciality");
+        doctorImage.setImageResource(extraImageId);
+
+        extraName = getIntent().getExtras().getString("name");
+        doctorName.setText(extraName);
+
+        extraQualification = getIntent().getExtras().getString("qualification");
+        doctorQualification.setText(extraQualification);
+
+        designation = getIntent().getExtras().getString("speciality");
         doctorSpeciality.setText(designation);
-        doctorExperience.setText(getIntent().getExtras().getString("experience"));
-        String feeAmount = getIntent().getExtras().getString("fee");
+
+        extraExperience = getIntent().getExtras().getString("experience");
+        doctorExperience.setText(extraExperience);
+
+        feeAmount = getIntent().getExtras().getString("fee");
         doctorFee.setText(feeAmount);
-        String work = getIntent().getExtras().getString("work");
+
+        work = getIntent().getExtras().getString("work");
         doctorWork.setText(work);
 
         ViewPager viewPager = findViewById(R.id.viewPager);
@@ -81,6 +93,11 @@ public class DoctorProfileActivity extends AppCompatActivity {
 
         btnNext.setOnClickListener(v -> {
             Intent i = new Intent(DoctorProfileActivity.this, DoctorOverviewActivity.class);
+            i.putExtra("imageId", extraImageId);
+            i.putExtra("name", extraName);
+            i.putExtra("qualification", extraQualification);
+            i.putExtra("speciality", designation);
+            i.putExtra("fee", feeAmount);
             startActivity(i);
         });
 

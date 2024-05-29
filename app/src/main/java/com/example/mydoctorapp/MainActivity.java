@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
 
         profileButton = findViewById(R.id.profileButton);
         profileButton.setOnClickListener(v -> {
-            Intent i = new Intent(MainActivity.this, PatientProfileActivity.class);
+            Intent i = new Intent(MainActivity.this, MoreActivity.class);
             startActivity(i);
         });
     }
