@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/appointDescription"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@id/aboutPatient"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:background="#E3ECE4"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginTop="30dp"
+    android:padding="20dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="7dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Doctor Name:"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/poppinsbold" />
+
+            <TextView
+                android:id="@+id/tvDoctorName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Asst. Prof. Dr. John"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:gravity="end"
+                android:fontFamily="@font/poppinsbold"
+                android:paddingLeft="8dp"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/tvAppointDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="7dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Appointment Date:"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:gravity="start"
+                android:fontFamily="@font/poppinsbold"
+                android:paddingRight="8dp"/>
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="22/06/2024"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:gravity="end"
+                android:fontFamily="@font/poppinsmedium"
+                android:paddingLeft="8dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/tvAppointmentTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="7dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Appointment Time:"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:gravity="start"
+                android:fontFamily="@font/poppinsbold"
+                android:paddingRight="8dp"/>
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="06:30 PM"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:gravity="end"
+                android:fontFamily="@font/poppinsmedium"
+                android:paddingLeft="8dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

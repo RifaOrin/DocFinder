@@ -19,6 +19,7 @@ public class UserInfoDB extends SQLiteOpenHelper {
     private static final String COLUMN_DIVISION = "division";
     private static final String COLUMN_DISTRICT = "district";
     private static final String COLUMN_PASSWORD = "password";
+    private static final String COLUMN_EMAIL = "email";
 
     public UserInfoDB(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -34,6 +35,7 @@ public class UserInfoDB extends SQLiteOpenHelper {
                 + COLUMN_GENDER + " TEXT, "
                 + COLUMN_DIVISION + " TEXT, "
                 + COLUMN_DISTRICT + " TEXT, "
+                + COLUMN_EMAIL + " TEXT, "
                 + COLUMN_PASSWORD + " TEXT"
                 + ")";
         db.execSQL(createTable);
@@ -46,7 +48,7 @@ public class UserInfoDB extends SQLiteOpenHelper {
     }
 
     public long insertUser(String phoneNumber, String firstName, String lastName, String dateOfBirth,
-                           String gender, String division, String district, String password) {
+                           String gender, String division, String district, String email, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(COLUMN_PHONE_NUMBER, phoneNumber);
@@ -56,6 +58,7 @@ public class UserInfoDB extends SQLiteOpenHelper {
         values.put(COLUMN_GENDER, gender);
         values.put(COLUMN_DIVISION, division);
         values.put(COLUMN_DISTRICT, district);
+        values.put(COLUMN_EMAIL, email);
         values.put(COLUMN_PASSWORD, password);
         long result = db.insert(TABLE_USERS, null, values);
         db.close();
@@ -63,7 +66,7 @@ public class UserInfoDB extends SQLiteOpenHelper {
     }
 
     public int updateUser(String phoneNumber, String firstName, String lastName, String dateOfBirth,
-                          String gender, String division, String district, String password) {
+                          String gender, String division, String district, String email, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(COLUMN_FIRST_NAME, firstName);
@@ -72,6 +75,7 @@ public class UserInfoDB extends SQLiteOpenHelper {
         values.put(COLUMN_GENDER, gender);
         values.put(COLUMN_DIVISION, division);
         values.put(COLUMN_DISTRICT, district);
+        values.put(COLUMN_EMAIL, email);
         values.put(COLUMN_PASSWORD, password);
         int result = db.update(TABLE_USERS, values, COLUMN_PHONE_NUMBER + "=?", new String[]{phoneNumber});
         db.close();
@@ -105,5 +109,15 @@ public class UserInfoDB extends SQLiteOpenHelper {
             e.printStackTrace();
         }
         return cursor;
+    }
+
+    public boolean hasUsers() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String countQuery = "SELECT COUNT(*) FROM " + TABLE_USERS;
+        Cursor cursor = db.rawQuery(countQuery, null);
+        cursor.moveToFirst();
+        int count = cursor.getInt(0);
+        cursor.close();
+        return count > 0;
     }
 }

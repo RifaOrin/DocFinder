@@ -26,6 +26,8 @@
                     android:layout_height="wrap_content"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:src="@drawable/back"
+                    android:clickable="true"
+                    android:focusable="true"
                     app:layout_constraintEnd_toStartOf="@+id/tvProfile"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@id/tvProfile"
@@ -36,7 +38,7 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintStart_toEndOf="@id/backButton"
                     app:layout_constraintTop_toTopOf="parent"
-                    android:text="Profile"
+                    android:text="Patient Profile"
                     android:textSize="20sp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/poppinsbold"
@@ -149,6 +151,7 @@
                     android:paddingRight="8dp"/>
 
                 <TextView
+                    android:id="@+id/patientBirthday"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="27-02-2002"
@@ -177,6 +180,7 @@
                     android:paddingRight="8dp"/>
 
                 <TextView
+                    android:id="@+id/patientGender"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Female"
@@ -205,6 +209,7 @@
                     android:paddingRight="8dp"/>
 
                 <TextView
+                    android:id="@+id/patientDistrict"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Dhaka"
@@ -233,6 +238,7 @@
                     android:paddingRight="8dp"/>
 
                 <TextView
+                    android:id="@+id/patientDivision"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Dhaka"

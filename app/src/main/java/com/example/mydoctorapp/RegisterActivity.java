@@ -213,7 +213,7 @@ public class RegisterActivity extends AppCompatActivity {
             String password = params[8];
 
             // Insert into local database
-            long localResult = userInfoDB.insertUser(phoneNumber, firstName, lastName, dateOfBirth, gender, division, district, password);
+            long localResult = userInfoDB.insertUser(phoneNumber, firstName, lastName, dateOfBirth, gender, division, district, email, password);
             preferenceManager.saveUser(phoneNumber, password);
 
             if (localResult == -1) {

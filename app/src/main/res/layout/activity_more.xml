@@ -72,11 +72,27 @@
             android:fontFamily="@font/poppinsbold"
             android:gravity="start"
             android:background="?attr/selectableItemBackgroundBorderless"/>
+
+        <Button
+            android:id="@+id/appointments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/profile"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="25dp"
+            android:text="View Appointments"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:drawableLeft="@drawable/ic_appointment"
+            android:drawableRight="@drawable/baseline_arrow_forward_ios_24"
+            android:fontFamily="@font/poppinsbold"
+            android:gravity="start"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
         <Button
             android:id="@+id/updateProfile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/profile"
+            app:layout_constraintTop_toBottomOf="@id/appointments"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="25dp"
             android:text="Update Profile"
@@ -89,7 +105,7 @@
             android:background="?attr/selectableItemBackgroundBorderless"/>
 
         <Button
-            android:id="@+id/change"
+            android:id="@+id/changePassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/updateProfile"
@@ -107,7 +123,7 @@
             android:id="@+id/logout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/change"
+            app:layout_constraintTop_toBottomOf="@id/changePassword"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="25dp"
             android:drawableLeft="@drawable/logout"

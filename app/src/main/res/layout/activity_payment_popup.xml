@@ -4,8 +4,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:background="@drawable/popup_background">
+    android:padding="16dp">
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -46,5 +45,16 @@
         android:fontFamily="@font/poppinsbold"
         android:backgroundTint="@color/green"
         style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+    <Button
+        android:id="@+id/popupViewAppointments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Appointments"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:drawableRight="@drawable/baseline_arrow_forward_ios_24"
+        android:fontFamily="@font/poppinsbold"
+        android:background="?attr/selectableItemBackgroundBorderless"/>
 
 </LinearLayout>

@@ -3,6 +3,7 @@ package com.example.mydoctorapp;
 import static android.content.ContentValues.TAG;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageButton;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -20,6 +21,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.material.card.MaterialCardView;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 
@@ -30,6 +32,11 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private ProgressDialog progressDialog;
+    private UserInfoDB userInfoDB;
+    private PreferenceManager preferenceManager;
+    private TextView tvUserName;
+
+    private AppCompatImageButton profileButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         LinearLayout cardContainer = findViewById(R.id.linearLayout);
         LayoutInflater inflater = LayoutInflater.from(this);
+        userInfoDB = new UserInfoDB(this);
+        preferenceManager = new PreferenceManager(this);
+        tvUserName = findViewById(R.id.tvUserName);
         showLoadingPopup();
         fetchDoctors(cardContainer, inflater);
 
@@ -58,7 +68,15 @@ public class MainActivity extends AppCompatActivity {
         setupCardClickListener(deptCardiology, "Cardiologist");
         setupCardClickListener(deptGynae, "Gynecologist");
 
-        printAllDoctors();
+        //printAllDoctors();
+
+        new GetUserNameTask().execute(preferenceManager.getPhoneNumber());
+
+        profileButton = findViewById(R.id.profileButton);
+        profileButton.setOnClickListener(v -> {
+            Intent i = new Intent(MainActivity.this, MoreActivity.class);
+            startActivity(i);
+        });
     }
 
     private void fetchDoctors(LinearLayout cardContainer, LayoutInflater inflater) {
@@ -200,6 +218,42 @@ public class MainActivity extends AppCompatActivity {
             Log.e("DeptViewActivity", "Cursor is null");
         }
     }
+
+    private class GetUserNameTask extends AsyncTask<String, Void, String> {
+        @Override
+        protected String doInBackground(String... params) {
+            String phoneNumber = params[0];
+            final String[] firstName = {null};
+
+            FirebaseFirestore db = FirebaseFirestore.getInstance();
+            db.collection("users").document(phoneNumber).get().addOnCompleteListener(task -> {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        firstName[0] = document.getString("first_name");
+                    }
+                }
+            });
+
+            try {
+                Thread.sleep(2000); // Adjust the sleep time if needed
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            return firstName[0];
+        }
+
+        @Override
+        protected void onPostExecute(String firstName) {
+            if (firstName != null) {
+                tvUserName.setText("Hi, " + firstName);
+            } else {
+                System.out.println("MainActivity: User's first name not found.");
+            }
+        }
+    }
+
 
 
 }
